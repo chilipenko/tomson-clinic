@@ -8,6 +8,7 @@ const { sequelize } = require('./db/models');
 const app = express();
 
 const adminRouter = require('./routes/admin')
+const identRouter = require('./routes/ident')
 
 dotenv.config();
 
@@ -41,6 +42,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.use('/api/admin', adminRouter);
+app.use('/api/ident', identRouter);
 
 app.listen(PORT, async () => {
   console.log(`Server started on PORT: ${PORT}`);
