@@ -4,7 +4,7 @@ const express = require('express');
 
 const router = express.Router();
 
-router.post('/', async (req, res) => {
+router.post('/PostTimeTable', async (req, res) => {
   try {
     console.log("req.body", req.body);
   } catch (error) {
