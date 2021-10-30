@@ -8,7 +8,7 @@ function СonsultationForm() {
       <h1>КОНСУЛЬТАЦИЯ</h1>
       <p>+ ФОТО ПРОТОКОЛ</p>
       <p>+ ФИНАНСОВЫЙ ПЛАН</p>
-      <button>ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ</button>
+      <button onClick={() => alert('hi')}>ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ</button>
     </div>
   )
 }
