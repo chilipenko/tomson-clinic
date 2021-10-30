@@ -1,23 +1,25 @@
-.banner-form {
+.welcome-block {
   display: flex;
-  flex-direction: column;
-  /* border: 3px solid tomato; */
-  max-width: 600px;
-  position: relative;
-  left: 15vh;
-  top: -55vh;
+  align-items: center;
+  margin-right: 60px;
+  margin-left: 60px;
+  margin-bottom: 60px;
 }
 
-.banner-form h1 {
-  color: rgb(7, 179, 7);
-  font-size: 50px;
+.welcome-block img {
+  margin-right: 30px;
 }
 
-.banner-form p {
+.welcome-block span {
   font-weight: 900;
+  font-size: 18px;
 }
 
-.banner-form button {
+.welcome-block p {
+  font-size: 13px;
+}
+
+.welcome-block button {
   border: 2px solid red;
   color: red;
   border-radius: 20px;
@@ -29,7 +31,7 @@
   transition: all 0.5s ease;
 }
 
-.banner-form button:hover {
+.welcome-block button:hover {
   background-color: rgb(7, 179, 7);
   color: white;
   border: none;

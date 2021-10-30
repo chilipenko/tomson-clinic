@@ -5,11 +5,12 @@ import test1 from './img/test1.jpg';
 import test2 from './img/test2.jpg';
 import test3 from './img/test3.jpg';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import styles from './Slider.module.css';
 
 
 function Slider() {
   return (
-    <div>
+    <div className={styles.divtest}>
       <Carousel>
         <Carousel.Item style={{'height': '600px'}}>
           <img
