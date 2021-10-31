@@ -1,0 +1,13 @@
+.find-banner {
+  padding: 30px;
+  background-color: rgb(7, 179, 7);
+  position: relative;
+  max-width: 400px;
+  border-radius: 30px;
+  color: white;
+  font-size: 30px;
+  font-weight: 900;
+  text-align: center;
+  top: -58vh;
+  left: 46vw;
+}

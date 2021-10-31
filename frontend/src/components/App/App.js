@@ -3,6 +3,8 @@ import Navigation from "../Navigation/Navigation";
 import Slider from "../Slider/Slider";
 import QuestionBlock from "../QuestionBlock/QuestionBlock";
 import ServicesBlock from "../ServicesBlock/ServicesBlock";
+import YandexMap from "../YandexMap/YandexMap";
+import Footer from "../Footer/Footer";
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
       <Slider />
       <QuestionBlock />
       <ServicesBlock />
+      <YandexMap />
+      <Footer />
     </Router>
   );
 }
