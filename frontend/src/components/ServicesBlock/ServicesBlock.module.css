@@ -1,12 +1,13 @@
 .services-block {
   display: flex;
+  margin-bottom: 120px;
 }
 
 .block {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 20px;
+  padding: 60px 20px;
   width: 40%;
   background-color: rgb(7, 179, 7);
   color: white;

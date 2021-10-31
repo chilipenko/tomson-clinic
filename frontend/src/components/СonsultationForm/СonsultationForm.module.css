@@ -4,8 +4,12 @@
   /* border: 3px solid tomato; */
   max-width: 600px;
   position: relative;
-  left: 15vh;
-  top: -55vh;
+  left: 8vh;
+  top: -60vh;
+  background-color: rgba(255, 255, 255, 0.521);
+  padding: 40px;
+  border-radius: 10%;
+  align-items: center;
 }
 
 .banner-form h1 {

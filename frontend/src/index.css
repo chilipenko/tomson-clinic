@@ -19,4 +19,5 @@ code {
 #root {
   display: flex;
   flex-direction: column;
+  background: url('./static/img/back.jpg') center repeat scroll;
 }
