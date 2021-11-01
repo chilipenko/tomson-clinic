@@ -1,0 +1,13 @@
+.content {
+  display: flex;
+  /* justify-content: center; */
+  flex-wrap: wrap;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.block {
+  border: 2px solid red;
+  width: 400px;
+  height: 200px;
+}
