@@ -19,5 +19,10 @@ code {
 #root {
   display: flex;
   flex-direction: column;
-  background: url('./static/img/back.jpg') center repeat scroll;
+  min-height: 100vh;
+  /* background: url('./static/img/back.jpg') no-repeat; */
+  /* -moz-background-size: 100%; Firefox 3.6+ */
+  /* -webkit-background-size: 100%; Safari 3.1+ и Chrome 4.0+ */
+  /* -o-background-size: 100%; Opera 9.6+ */
+  /* background-size: 100%; Современные браузеры */
 }
