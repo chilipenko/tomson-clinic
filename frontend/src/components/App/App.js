@@ -8,6 +8,7 @@ import Footer from "../Footer/Footer";
 import Denistry from "../Dentistry/Denistry";
 import ReactAnimations from "../Animation/Animation";
 import LeftSideBar from "../Animation/LeftSideBar";
+import YourChoiceBlock from "./YourChoice/YourChoice";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <QuestionBlock />
         <ServicesBlock />
         {/* <ReactAnimations /> */}
+        <YourChoiceBlock />
         <YandexMap />
       </Route>
       <Route exact path='/denistry'>
