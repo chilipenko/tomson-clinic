@@ -4,7 +4,7 @@ import styles from './DenistryCard.module.css';
 
 function DenistryCard({el}) {
 
-  const [modalActive, setModalActive] = useState(false)
+  const [modalActive, setModalActive] = useState(false);
 
   return (
     <>
