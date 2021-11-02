@@ -7,7 +7,10 @@ import styles from './ServicesBlock.module.css';
 
 function ServicesBlock() {
 
-  let denistryHistory = useHistory()
+  let denistryHistory = useHistory();
+
+  // const [modalActive, setModalActive] = useState(false)
+  
 
   return (
     <div className={styles['services-block']}>

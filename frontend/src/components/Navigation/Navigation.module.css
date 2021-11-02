@@ -41,7 +41,6 @@
 }
  */
 
-
 .navigation {
   display: flex;
   flex-direction: column;
@@ -64,6 +63,7 @@
   text-decoration: none;
   color: rgb(7, 179, 7);
   padding: 5px 10px;
+  min-width: 300px;
   transition: all 0.3s ease-out;
 }
 
