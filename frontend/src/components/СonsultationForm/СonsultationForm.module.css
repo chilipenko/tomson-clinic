@@ -36,6 +36,6 @@
 .banner-form button:hover {
   background-color: rgb(7, 179, 7);
   color: white;
-  border: none;
+  border: 2px solid rgb(7, 179, 7);
   transition: all 0.5s ease;
 }

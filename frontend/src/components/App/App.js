@@ -20,6 +20,12 @@ function App() {
       <Route exact path='/denistry'>
         <Denistry />
       </Route>
+      <Route exact path='/denistry/treatment'/>
+      <Route exact path='/denistry/hygiene'/>
+      <Route exact path='/denistry/implantation'/>
+      <Route exact path='/denistry/orthodontics'/>
+      <Route exact path='/denistry/surgey'/>
+      <Route exact path='/denistry/prosthetics'/>
       <Footer />
     </Router>
   );
