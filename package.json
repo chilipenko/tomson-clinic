@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/chilipenko/tomson-clinic/issues"
   },
-  "homepage": "https://github.com/chilipenko/tomson-clinic#readme"
+  "homepage": "https://github.com/chilipenko/tomson-clinic#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
 }

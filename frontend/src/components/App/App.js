@@ -6,15 +6,20 @@ import ServicesBlock from "../ServicesBlock/ServicesBlock";
 import YandexMap from "../YandexMap/YandexMap";
 import Footer from "../Footer/Footer";
 import Denistry from "../Dentistry/Denistry";
+import ReactAnimations from "../Animation/Animation";
+import LeftSideBar from "../Animation/LeftSideBar";
+
 
 function App() {
   return (
     <Router>
-      <Navigation />
+      {/* <Navigation /> */}
+      <LeftSideBar />
       <Route exact path='/'>
         <Slider />
         <QuestionBlock />
         <ServicesBlock />
+        {/* <ReactAnimations /> */}
         <YandexMap />
       </Route>
       <Route exact path='/denistry'>
