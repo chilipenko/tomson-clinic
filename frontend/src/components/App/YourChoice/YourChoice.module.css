@@ -1,0 +1,22 @@
+.yourchoice-block {
+  display: flex;
+  align-items: center;
+  margin-right: 60px;
+  margin-left: 60px;
+  margin-bottom: 60px;
+  font-family: Muller,Arial,sans-serif;
+}
+
+.yourchoice-block img {
+  margin-right: 30px;
+  width: 60%!important;
+}
+
+.yourchoice-block span {
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.yourchoice-block p {
+  font-size: 13px;
+}

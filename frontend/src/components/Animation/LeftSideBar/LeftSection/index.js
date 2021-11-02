@@ -23,7 +23,7 @@ const LeftSection = () => {
           <Link to="/"><li>Детская стоматалогия</li></Link>
           <Link to="/"><li>Отзывы</li></Link>
           <Link to="/"><li>Контакты</li></Link>
-          <Link to="/"><li>Цены</li></Link>
+          <Link to="/denistry"><li>Цены</li></Link>
       </ul>
     </div>
   );
