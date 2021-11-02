@@ -9,7 +9,7 @@ function YandexMap() {
   return (
     <div className={styles['map-content']}>
       <YMaps>
-        <Map style={{'width': '70%', 'height': '400px'}} defaultState={{ center: [59.957503, 30.480785], zoom: 14 }}>
+        <Map style={{'width': '100%', 'height': '600px'}} defaultState={{ center: [59.957503, 30.480785], zoom: 14 }}>
           <Placemark geometry={[59.957503, 30.480785]}
           properties=
             {{hintContent: 'ТОМСОН', balloonContent: 'Санкт-Петербург, пр. Наставников, д. 47 к.1'}}
