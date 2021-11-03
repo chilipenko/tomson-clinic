@@ -17,13 +17,13 @@ const LeftSection = () => {
         <AiOutlineCloseCircle size='40px' color='red' onClick={() => {setIsShowSidebar(false); setStatus(status === 'close')}}/>
       </div>
       <ul className={styles['menu-list']}>
-       <Link to="/"><li><GiShinyApple size='20px' color='red'/>О клинике</li></Link>
-          <Link to="/"><GiShinyApple size='20px' color='red'/><li>Стоматалогия</li></Link>
-          <Link to="/"><GiShinyApple size='20px' color='red'/><li>Косметалогия</li></Link>
-          <Link to="/"><GiShinyApple size='20px' color='red'/><li>Детская стоматалогия</li></Link>
-          <Link to="/"><GiShinyApple size='20px' color='red'/><li>Отзывы</li></Link>
-          <Link to="/"><GiShinyApple size='20px' color='red'/><li>Контакты</li></Link>
-          <Link to="/denistry"><GiShinyApple size='20px' color='red'/><li>Цены</li></Link>
+        <Link to="/"><li>О клинике</li></Link>
+        <Link to="/"><li>Стоматалогия</li></Link>
+        <Link to="/"><li>Косметалогия</li></Link>
+        <Link to="/"><li>Детская стоматалогия</li></Link>
+        <Link to="/"><li>Отзывы</li></Link>
+        <Link to="/"><li>Контакты</li></Link>
+        <Link to="/denistry"><li>Цены</li></Link>
       </ul>
     </div>
   );

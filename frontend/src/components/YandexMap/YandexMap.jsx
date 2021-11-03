@@ -17,7 +17,7 @@ function YandexMap() {
             iconLayout: 'default#image',
             iconImageHref: tooth,
             iconImageSize: [30, 42],
-            iconImageOffset: [-3, -42]
+            iconImageOffset: [-3, -4]
         }} 
         modules= {['geoObject.addon.balloon', 'geoObject.addon.hint']}
         />
