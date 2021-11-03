@@ -1,6 +1,7 @@
 const express = require('express');
 const session = require('express-session');
 const SessionFileStore = require('session-file-store')(session);
+const path = require('path');
 const cors = require('cors');
 const dotenv = require('dotenv');
 // const { sequelize } = require('./db/models');
@@ -41,8 +42,15 @@ app.use(cors(corsOptions));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, 'frontend/build')));
+
 // app.use('/api/admin', adminRouter);
 app.use('/api/ident', identRouter);
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'frontend/build/index.html'));
+});
 
 app.listen(PORT, async () => {
   console.log(`Server started on PORT: ${PORT}`);
