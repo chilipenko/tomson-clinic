@@ -43,13 +43,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, 'frontend/build')));
+app.use(express.static(path.join(__dirname, '..', 'frontend', 'build')));
 
 // app.use('/api/admin', adminRouter);
 app.use('/api/ident', identRouter);
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'frontend/build/index.html'));
+  res.sendFile(path.join(__dirname, '..', 'frontend', 'build', 'index.html'));
 });
 
 app.listen(PORT, async () => {
