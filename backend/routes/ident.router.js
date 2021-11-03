@@ -6,8 +6,9 @@ const router = express.Router();
 
 router.post('/PostTimeTable', async (req, res) => {
   try {
-    console.log("req.body", req.body);
+    // console.log("req.body", req.body);
     app.locals.incomingJson = req.body;
+    console.log("app.locals.incomingJson", app.locals.incomingJson);
   } catch (error) {
     console.log(error);
     res.status(401).json({error: error})
