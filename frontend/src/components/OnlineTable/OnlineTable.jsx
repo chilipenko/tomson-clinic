@@ -843,7 +843,7 @@ function OnlineTable({active, setActive, title}) {
   console.log("Test");
   useEffect(() => {
     // getIncomingJson();
-    fetch('https://tomson-clinic.herokuapp.com/api/website/timetable')
+    fetch('https://tomson-clinic.herokuapp.com/api/ident/gettimetable')
       .then(res => res.json())
       .then(console.log);
     // console.log("incomingJson", incomingJson);
