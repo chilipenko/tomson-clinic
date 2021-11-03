@@ -8,7 +8,7 @@ import Footer from "../Footer/Footer";
 import Denistry from "../Dentistry/Denistry";
 import ReactAnimations from "../Animation/Animation";
 import LeftSideBar from "../Animation/LeftSideBar";
-import YourChoiceBlock from "./YourChoice/YourChoice";
+import YourChoiceBlock from "../YourChoice/YourChoice"
 import OnlineTable from "../OnlineTable/OnlineTable";
 
 
