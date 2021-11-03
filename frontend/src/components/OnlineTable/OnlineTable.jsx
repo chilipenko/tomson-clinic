@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { useTable } from 'react-table';
 import moment from 'moment';
@@ -840,6 +840,14 @@ const doctorsSlotsRowArr = [];
 
 function OnlineTable({active, setActive, title}) {
 
+  console.log("Test");
+  useEffect(() => {
+    // getIncomingJson();
+    fetch('https://tomson-clinic.herokuapp.com/api/website/timetable')
+      .then(res => res.json())
+      .then(console.log);
+    // console.log("incomingJson", incomingJson);
+  }, []);
 
   // creating table columns
   const columns = React.useMemo(() =>
