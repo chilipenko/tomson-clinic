@@ -50,7 +50,7 @@
 
 .text-content ul {
   /* list-style-image: url('./img/done.svg'); */
-  list-style-image: url('./img//apple.svg');
+  list-style-image: url('./img/apple.svg');
   list-style-type: none;
   margin-left: 50px;
 }
