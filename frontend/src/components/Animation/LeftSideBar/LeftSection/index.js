@@ -5,6 +5,8 @@ import BurgerButton from '../BurgerButton';
 import { LeftSideBarContext } from '../index';
 import styles from '../../../Navigation/Navigation.module.css';
 import './style.scss';
+import {GiShinyApple} from 'react-icons/gi'
+import {AiOutlineCloseCircle} from 'react-icons/ai'
 
 const LeftSection = () => {
   const { isShowSidebar, setIsShowSidebar } = useContext(LeftSideBarContext);
@@ -12,18 +14,16 @@ const LeftSection = () => {
   return (
     <div className={`LeftSideBar__LeftSection LeftSideBar__LeftSection--${isShowSidebar ? 'show' : 'hide'}`}>
       <div className="LeftSideBar__LeftSection__topWrapper">
-        <BurgerButton
-          onClick={() => {setIsShowSidebar(false); setStatus(status === 'open' ? 'close' : 'open')}}
-        />
+        <AiOutlineCloseCircle size='40px' color='red' onClick={() => {setIsShowSidebar(false); setStatus(status === 'close')}}/>
       </div>
       <ul className={styles['menu-list']}>
-      <Link to="/"><li>О клинике</li></Link>
-          <Link to="/"><li>Стоматалогия</li></Link>
-          <Link to="/"><li>Косметалогия</li></Link>
-          <Link to="/"><li>Детская стоматалогия</li></Link>
-          <Link to="/"><li>Отзывы</li></Link>
-          <Link to="/"><li>Контакты</li></Link>
-          <Link to="/denistry"><li>Цены</li></Link>
+       <Link to="/"><li><GiShinyApple size='20px' color='red'/>О клинике</li></Link>
+          <Link to="/"><GiShinyApple size='20px' color='red'/><li>Стоматалогия</li></Link>
+          <Link to="/"><GiShinyApple size='20px' color='red'/><li>Косметалогия</li></Link>
+          <Link to="/"><GiShinyApple size='20px' color='red'/><li>Детская стоматалогия</li></Link>
+          <Link to="/"><GiShinyApple size='20px' color='red'/><li>Отзывы</li></Link>
+          <Link to="/"><GiShinyApple size='20px' color='red'/><li>Контакты</li></Link>
+          <Link to="/denistry"><GiShinyApple size='20px' color='red'/><li>Цены</li></Link>
       </ul>
     </div>
   );
