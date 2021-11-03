@@ -3,6 +3,7 @@ import React from 'react';
 import DenistryCard from '../DenistryCard/DenistryCard';
 import { v4 as uuidv4 } from 'uuid';
 import styles from './Denistry.module.css';
+import Fade from "react-reveal/Fade";
 
 function Denistry() {
 
@@ -98,11 +99,13 @@ function Denistry() {
   // } 
 
   return (
+    <Fade bottom>
     <div className={styles.content}>
       {
         denistryData.map(el => <DenistryCard  key={uuidv4()} el={el}/>)
       }
     </div>
+    </Fade>
   )
 }
 
