@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState }  from "react";
 import dentist from "./img/IMG_9572.jpg";
 import styles from "./QuestionBlock.module.css";
 import Fade from "react-reveal/Fade";
+import ModalQuestion from "../ModalQuestion/ModalQuestion";
 
 function QuestionBlock() {
+  const [modalActive, setModalActive] = useState(false);
   return (
+    <>
       <div className={styles["welcome-block"]}>
         <Fade left>
           <img
@@ -32,10 +35,15 @@ function QuestionBlock() {
             <p>Будем рады видеть Вас в нашей Клинике!</p>
             <span>Будьте здоровы и красивы!</span>
             <p>Генеральный директор Клиники «ТОМСОН»</p>
-            <button>ЗАДАТЬ ВОПРОС</button>
+            <button onClick={() => setModalActive(true)}>ЗАДАТЬ ВОПРОС</button>
           </div>
+         
         </Fade>
       </div>
+ {
+  modalActive && <ModalQuestion active={modalActive} setActive={setModalActive} />
+ }
+ </>
   );
 }
 
