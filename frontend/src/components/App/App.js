@@ -9,6 +9,7 @@ import Denistry from "../Dentistry/Denistry";
 import ReactAnimations from "../Animation/Animation";
 import LeftSideBar from "../Animation/LeftSideBar";
 import YourChoiceBlock from "./YourChoice/YourChoice";
+import OnlineTable from "../OnlineTable/OnlineTable";
 
 
 function App() {
@@ -26,6 +27,9 @@ function App() {
       </Route>
       <Route exact path='/denistry'>
         <Denistry />
+      </Route>
+      <Route exact path='/onlinetable'>
+        <OnlineTable />
       </Route>
       <Route exact path='/denistry/treatment'/>
       <Route exact path='/denistry/hygiene'/>

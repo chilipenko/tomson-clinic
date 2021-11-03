@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './ModalTable.module.css';
 import styled from 'styled-components';
 import { useTable } from 'react-table';
 import moment from 'moment';
@@ -838,7 +839,7 @@ const doctorsArr1 = incomingJson.Doctors.map((el, index) => ({ Header: el.Name, 
 const dataArr = [];
 const doctorsSlotsRowArr = [];
 
-function OnlineTable({active, setActive, title}) {
+function ModalTable({active, setActive, title}) {
 
 
   // creating table columns
@@ -900,7 +901,9 @@ function OnlineTable({active, setActive, title}) {
 
   return (
 
-    <>
+    <div className={active ? `${styles.modal} ${styles.active}` : `${styles.modal}`} onClick={() => setActive(false)}>
+      <div className={active ? `${styles['modal__content']} ${styles.active}` : `${styles['modal__content']}`} onClick={e => e.stopPropagation()}>
+      
       <Styles>
       <Table
         columns={columns}
@@ -929,7 +932,9 @@ function OnlineTable({active, setActive, title}) {
       />
     </Styles>
 
-     </>
+      </div>
+
+    </div>
   );
 }
-export default OnlineTable;
+export default ModalTable

@@ -2,6 +2,7 @@ import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import dentist from './img/dentist.png';
 import styles from './YourChoice.module.css';
+import Fade from 'react-reveal/Fade';
 
 function YourChoiceBlock() {
   return (
@@ -31,8 +32,9 @@ function YourChoiceBlock() {
           />
         </Carousel.Item>
       </Carousel>
-
+    
     </div>
+     <Fade right>
       <div>
         <span>ПОЧЕМУ НАС ВЫБРАЛИ БОЛЕЕ 18 ТЫСЯЧ ПАЦИЕНТОВ?</span>
        <p>Командная работа</p>
@@ -43,7 +45,9 @@ function YourChoiceBlock() {
        <p>25 лет стабильной работы</p>
 
       </div>
+      </Fade>
     </div>
+    
   )
 }
 
