@@ -118,7 +118,7 @@ function Table({
 }
 
 // creating array for table columns
-const doctorsArr1 = incomingJson.Doctors.map((el, index) => ({ Header: el.Name, accessor: `doc${index}` }));
+const doctorsArr = incomingJson.Doctors.map((el, index) => ({ Header: el.Name, accessor: `doc${index}` }));
 const dataArr = [];
 const doctorsSlotsRowArr = [];
 
@@ -132,19 +132,6 @@ function OnlineTable({ active, setActive, title }) {
       .then(console.log);
     // console.log("incomingJson", incomingJson);
   }, []);
-
-  // creating table columns
-  const columns = React.useMemo(() =>
-    [
-      {
-        Header: 'Время',
-        accessor: 'timeslot',
-      }
-      ,
-      ...doctorsArr1
-    ]
-    , []
-  )
 
   // creating timestamps
   let startTime = moment('09:00', 'HH:mm');
@@ -169,7 +156,7 @@ function OnlineTable({ active, setActive, title }) {
     return Object.keys(dates).find(key => dates[key] === userFrendlyDate)
   };
   
-  const currentDate = findDatesKey('05.11.2021');
+  const currentDate = findDatesKey('04.11.2021');
 
   // filling data array for table
   for (let i = 0; i <= 47; i += 1) {
@@ -204,6 +191,30 @@ function OnlineTable({ active, setActive, title }) {
     }
   });
 
+
+const haveFreeSlotsObj = {};
+const freeSlotsOnlyDataArr = dataArr.map((row) => {
+  for (let key in row) {
+    if ((!haveFreeSlotsObj[key]) && (row[key] === '-')) {
+      haveFreeSlotsObj[key] = '-'
+    }
+  }
+});
+
+const freeDoctorsArr = doctorsArr.filter(el => haveFreeSlotsObj[el.accessor]);
+
+  // creating table columns
+  const columns = React.useMemo(() =>
+    [
+      {
+        Header: 'Время',
+        accessor: 'timeslot',
+      }
+      ,
+      ...freeDoctorsArr
+    ]
+    , []
+  )
 
   // passing data to the table 
   const data = React.useMemo(() =>
