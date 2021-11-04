@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import styles from './Modal.module.css';
 
 function Modal({active, setActive, prices, title}) {
-  console.log(prices)
+  // console.log(prices)
   return (
     <div className={active ? `${styles.modal} ${styles.active}` : `${styles.modal}`} onClick={() => setActive(false)}>
       <div className={active ? `${styles['modal__content']} ${styles.active}` : `${styles['modal__content']}`} onClick={e => e.stopPropagation()}>
