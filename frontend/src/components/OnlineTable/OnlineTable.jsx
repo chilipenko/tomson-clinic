@@ -4,7 +4,2113 @@ import { useTable } from 'react-table';
 import moment from 'moment';
 
 
-const incomingJson = { "Doctors": [{ "Id": 4, "Name": "Логунков Евгений Игоревич" }, { "Id": 5, "Name": "Шаповалова Анна Сергеевна" }, { "Id": 6, "Name": "Томсон Наталия Владимировна" }, { "Id": 8, "Name": "Шабанов Эльдар Шабанович" }, { "Id": 16, "Name": "Канунникова Ольга Николаевна" }, { "Id": 16784, "Name": "Краснов Николай Владимирович" }, { "Id": 17347, "Name": "Богатырев Даниил Михайлович" }, { "Id": 13536, "Name": "Леонова Елена Леонидовна" }, { "Id": 13556, "Name": "Дочия Татия Мерабовна" }, { "Id": 15819, "Name": "Петрова Анастасия Сергеевна" }, { "Id": 16491, "Name": "Галкина Мария Игоревна" }, { "Id": 16555, "Name": "Пономарёва Валерия Александровна" }, { "Id": 13245, "Name": "Логункова Ксения Вячеславовна" }, { "Id": 13809, "Name": "Калитовская Марьяна Степановна" }], "Branches": [{ "Id": 1, "Name": "Томсон" }], "Intervals": [{ "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-04T09:00:00+03:00", "LengthInMinutes": 180, "IsBusy": true }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-04T12:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-04T12:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-04T12:30:00+03:00", "LengthInMinutes": 360, "IsBusy": true }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-04T18:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-04T18:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-04T19:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-04T19:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-04T19:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-04T19:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-04T20:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-04T20:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-04T20:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-04T20:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-05T09:00:00+03:00", "LengthInMinutes": 360, "IsBusy": true }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-06T09:00:00+03:00", "LengthInMinutes": 585, "IsBusy": true }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-06T18:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-06T19:00:00+03:00", "LengthInMinutes": 120, "IsBusy": true }, { "DoctorId": 5, "BranchId": 1, "StartDateTime": "2021-11-04T10:00:00+03:00", "LengthInMinutes": 510, "IsBusy": true }, { "DoctorId": 5, "BranchId": 1, "StartDateTime": "2021-11-04T18:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 5, "BranchId": 1, "StartDateTime": "2021-11-04T18:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 5, "BranchId": 1, "StartDateTime": "2021-11-04T19:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 5, "BranchId": 1, "StartDateTime": "2021-11-04T19:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 5, "BranchId": 1, "StartDateTime": "2021-11-04T19:30:00+03:00", "LengthInMinutes": 90, "IsBusy": true }, { "DoctorId": 5, "BranchId": 1, "StartDateTime": "2021-11-05T09:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 5, "BranchId": 1, "StartDateTime": "2021-11-05T09:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 5, "BranchId": 1, "StartDateTime": "2021-11-05T09:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 5, "BranchId": 1, "StartDateTime": "2021-11-05T09:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 5, "BranchId": 1, "StartDateTime": "2021-11-05T10:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 5, "BranchId": 1, "StartDateTime": "2021-11-05T10:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 5, "BranchId": 1, "StartDateTime": "2021-11-05T10:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 5, "BranchId": 1, "StartDateTime": "2021-11-05T10:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 5, "BranchId": 1, "StartDateTime": "2021-11-05T11:00:00+03:00", "LengthInMinutes": 240, "IsBusy": true }, { "DoctorId": 6, "BranchId": 1, "StartDateTime": "2021-11-05T15:00:00+03:00", "LengthInMinutes": 240, "IsBusy": true }, { "DoctorId": 8, "BranchId": 1, "StartDateTime": "2021-11-05T15:00:00+03:00", "LengthInMinutes": 360, "IsBusy": true }, { "DoctorId": 16, "BranchId": 1, "StartDateTime": "2021-11-06T09:00:00+03:00", "LengthInMinutes": 720, "IsBusy": true }, { "DoctorId": 13245, "BranchId": 1, "StartDateTime": "2021-11-05T09:00:00+03:00", "LengthInMinutes": 360, "IsBusy": true }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T15:00:00+03:00", "LengthInMinutes": 90, "IsBusy": true }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T16:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T16:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T17:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T17:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T17:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T17:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T18:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T18:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T18:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T18:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T19:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T19:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T19:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T19:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T20:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T20:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T20:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T20:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13556, "BranchId": 1, "StartDateTime": "2021-11-04T15:00:00+03:00", "LengthInMinutes": 360, "IsBusy": true }, { "DoctorId": 13556, "BranchId": 1, "StartDateTime": "2021-11-05T09:00:00+03:00", "LengthInMinutes": 360, "IsBusy": true }, { "DoctorId": 13809, "BranchId": 1, "StartDateTime": "2021-11-04T09:00:00+03:00", "LengthInMinutes": 120, "IsBusy": true }, { "DoctorId": 13809, "BranchId": 1, "StartDateTime": "2021-11-04T11:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13809, "BranchId": 1, "StartDateTime": "2021-11-04T11:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13809, "BranchId": 1, "StartDateTime": "2021-11-04T11:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13809, "BranchId": 1, "StartDateTime": "2021-11-04T11:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13809, "BranchId": 1, "StartDateTime": "2021-11-04T12:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13809, "BranchId": 1, "StartDateTime": "2021-11-04T12:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13809, "BranchId": 1, "StartDateTime": "2021-11-04T12:30:00+03:00", "LengthInMinutes": 30, "IsBusy": true }, { "DoctorId": 13809, "BranchId": 1, "StartDateTime": "2021-11-04T13:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13809, "BranchId": 1, "StartDateTime": "2021-11-04T13:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13809, "BranchId": 1, "StartDateTime": "2021-11-04T13:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13809, "BranchId": 1, "StartDateTime": "2021-11-04T13:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13809, "BranchId": 1, "StartDateTime": "2021-11-04T14:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13809, "BranchId": 1, "StartDateTime": "2021-11-04T14:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13809, "BranchId": 1, "StartDateTime": "2021-11-04T14:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13809, "BranchId": 1, "StartDateTime": "2021-11-04T14:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 15819, "BranchId": 1, "StartDateTime": "2021-11-06T11:00:00+03:00", "LengthInMinutes": 480, "IsBusy": true }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T15:00:00+03:00", "LengthInMinutes": 60, "IsBusy": true }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T16:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T16:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T16:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T16:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T17:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T17:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T17:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T17:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T18:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T18:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T18:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T18:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T19:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T19:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T19:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T19:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T20:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T20:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T20:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T20:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16555, "BranchId": 1, "StartDateTime": "2021-11-06T10:00:00+03:00", "LengthInMinutes": 540, "IsBusy": true }, { "DoctorId": 16555, "BranchId": 1, "StartDateTime": "2021-11-06T19:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16555, "BranchId": 1, "StartDateTime": "2021-11-06T19:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16555, "BranchId": 1, "StartDateTime": "2021-11-06T19:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16555, "BranchId": 1, "StartDateTime": "2021-11-06T19:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16555, "BranchId": 1, "StartDateTime": "2021-11-06T20:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16555, "BranchId": 1, "StartDateTime": "2021-11-06T20:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16555, "BranchId": 1, "StartDateTime": "2021-11-06T20:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16555, "BranchId": 1, "StartDateTime": "2021-11-06T20:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T09:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T09:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T09:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T09:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T10:00:00+03:00", "LengthInMinutes": 60, "IsBusy": true }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T11:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T11:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T11:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T11:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T12:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T12:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T12:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T12:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T13:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T13:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T13:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T13:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T14:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T14:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T14:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T14:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T15:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T15:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T15:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T15:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T16:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T16:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T16:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T16:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T17:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T17:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T17:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T17:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T18:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T18:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T18:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T18:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T19:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T19:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T19:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T19:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T20:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T20:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T09:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T09:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T09:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T09:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T10:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T10:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T10:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T10:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T11:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T11:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T11:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T11:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T12:00:00+03:00", "LengthInMinutes": 150, "IsBusy": true }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T14:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T14:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T15:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T15:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T15:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T15:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T16:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T16:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T16:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T16:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T17:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T17:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T17:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T17:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T18:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T18:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T18:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T18:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T19:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T19:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T19:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T19:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T20:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T20:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T09:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T09:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T09:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T09:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T10:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T10:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T10:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T10:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T11:00:00+03:00", "LengthInMinutes": 15, "IsBusy": true }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T11:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T11:30:00+03:00", "LengthInMinutes": 60, "IsBusy": true }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T12:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T12:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T13:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T13:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T13:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T13:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T14:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T14:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T14:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T14:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T15:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T15:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T15:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T15:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T16:00:00+03:00", "LengthInMinutes": 60, "IsBusy": true }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T17:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T17:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T17:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T17:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T18:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T18:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T18:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T18:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T19:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T19:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T19:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T19:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T20:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T20:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T20:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T20:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T10:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T10:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T10:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T10:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T11:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T11:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T11:30:00+03:00", "LengthInMinutes": 120, "IsBusy": true }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T13:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T13:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T14:00:00+03:00", "LengthInMinutes": 30, "IsBusy": true }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T14:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T14:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T15:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T15:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T15:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T15:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T16:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T16:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T16:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T16:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T17:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T17:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T17:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T17:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T18:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T18:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T18:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T18:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T19:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T19:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T19:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T19:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T20:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T20:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T20:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T20:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }] }
+// const incomingJson = { "Doctors": [{ "Id": 4, "Name": "Логунков Евгений Игоревич" }, { "Id": 5, "Name": "Шаповалова Анна Сергеевна" }, { "Id": 6, "Name": "Томсон Наталия Владимировна" }, { "Id": 8, "Name": "Шабанов Эльдар Шабанович" }, { "Id": 16, "Name": "Канунникова Ольга Николаевна" }, { "Id": 16784, "Name": "Краснов Николай Владимирович" }, { "Id": 17347, "Name": "Богатырев Даниил Михайлович" }, { "Id": 13536, "Name": "Леонова Елена Леонидовна" }, { "Id": 13556, "Name": "Дочия Татия Мерабовна" }, { "Id": 15819, "Name": "Петрова Анастасия Сергеевна" }, { "Id": 16491, "Name": "Галкина Мария Игоревна" }, { "Id": 16555, "Name": "Пономарёва Валерия Александровна" }, { "Id": 13245, "Name": "Логункова Ксения Вячеславовна" }, { "Id": 13809, "Name": "Калитовская Марьяна Степановна" }], "Branches": [{ "Id": 1, "Name": "Томсон" }], "Intervals": [{ "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-04T09:00:00+03:00", "LengthInMinutes": 180, "IsBusy": true }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-04T12:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-04T12:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-04T12:30:00+03:00", "LengthInMinutes": 360, "IsBusy": true }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-04T18:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-04T18:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-04T19:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-04T19:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-04T19:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-04T19:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-04T20:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-04T20:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-04T20:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-04T20:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-05T09:00:00+03:00", "LengthInMinutes": 360, "IsBusy": true }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-06T09:00:00+03:00", "LengthInMinutes": 585, "IsBusy": true }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-06T18:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 4, "BranchId": 1, "StartDateTime": "2021-11-06T19:00:00+03:00", "LengthInMinutes": 120, "IsBusy": true }, { "DoctorId": 5, "BranchId": 1, "StartDateTime": "2021-11-04T10:00:00+03:00", "LengthInMinutes": 510, "IsBusy": true }, { "DoctorId": 5, "BranchId": 1, "StartDateTime": "2021-11-04T18:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 5, "BranchId": 1, "StartDateTime": "2021-11-04T18:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 5, "BranchId": 1, "StartDateTime": "2021-11-04T19:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 5, "BranchId": 1, "StartDateTime": "2021-11-04T19:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 5, "BranchId": 1, "StartDateTime": "2021-11-04T19:30:00+03:00", "LengthInMinutes": 90, "IsBusy": true }, { "DoctorId": 5, "BranchId": 1, "StartDateTime": "2021-11-05T09:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 5, "BranchId": 1, "StartDateTime": "2021-11-05T09:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 5, "BranchId": 1, "StartDateTime": "2021-11-05T09:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 5, "BranchId": 1, "StartDateTime": "2021-11-05T09:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 5, "BranchId": 1, "StartDateTime": "2021-11-05T10:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 5, "BranchId": 1, "StartDateTime": "2021-11-05T10:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 5, "BranchId": 1, "StartDateTime": "2021-11-05T10:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 5, "BranchId": 1, "StartDateTime": "2021-11-05T10:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 5, "BranchId": 1, "StartDateTime": "2021-11-05T11:00:00+03:00", "LengthInMinutes": 240, "IsBusy": true }, { "DoctorId": 6, "BranchId": 1, "StartDateTime": "2021-11-05T15:00:00+03:00", "LengthInMinutes": 240, "IsBusy": true }, { "DoctorId": 8, "BranchId": 1, "StartDateTime": "2021-11-05T15:00:00+03:00", "LengthInMinutes": 360, "IsBusy": true }, { "DoctorId": 16, "BranchId": 1, "StartDateTime": "2021-11-06T09:00:00+03:00", "LengthInMinutes": 720, "IsBusy": true }, { "DoctorId": 13245, "BranchId": 1, "StartDateTime": "2021-11-05T09:00:00+03:00", "LengthInMinutes": 360, "IsBusy": true }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T15:00:00+03:00", "LengthInMinutes": 90, "IsBusy": true }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T16:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T16:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T17:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T17:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T17:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T17:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T18:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T18:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T18:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T18:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T19:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T19:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T19:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T19:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T20:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T20:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T20:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13536, "BranchId": 1, "StartDateTime": "2021-11-05T20:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13556, "BranchId": 1, "StartDateTime": "2021-11-04T15:00:00+03:00", "LengthInMinutes": 360, "IsBusy": true }, { "DoctorId": 13556, "BranchId": 1, "StartDateTime": "2021-11-05T09:00:00+03:00", "LengthInMinutes": 360, "IsBusy": true }, { "DoctorId": 13809, "BranchId": 1, "StartDateTime": "2021-11-04T09:00:00+03:00", "LengthInMinutes": 120, "IsBusy": true }, { "DoctorId": 13809, "BranchId": 1, "StartDateTime": "2021-11-04T11:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13809, "BranchId": 1, "StartDateTime": "2021-11-04T11:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13809, "BranchId": 1, "StartDateTime": "2021-11-04T11:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13809, "BranchId": 1, "StartDateTime": "2021-11-04T11:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13809, "BranchId": 1, "StartDateTime": "2021-11-04T12:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13809, "BranchId": 1, "StartDateTime": "2021-11-04T12:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13809, "BranchId": 1, "StartDateTime": "2021-11-04T12:30:00+03:00", "LengthInMinutes": 30, "IsBusy": true }, { "DoctorId": 13809, "BranchId": 1, "StartDateTime": "2021-11-04T13:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13809, "BranchId": 1, "StartDateTime": "2021-11-04T13:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13809, "BranchId": 1, "StartDateTime": "2021-11-04T13:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13809, "BranchId": 1, "StartDateTime": "2021-11-04T13:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13809, "BranchId": 1, "StartDateTime": "2021-11-04T14:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13809, "BranchId": 1, "StartDateTime": "2021-11-04T14:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13809, "BranchId": 1, "StartDateTime": "2021-11-04T14:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 13809, "BranchId": 1, "StartDateTime": "2021-11-04T14:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 15819, "BranchId": 1, "StartDateTime": "2021-11-06T11:00:00+03:00", "LengthInMinutes": 480, "IsBusy": true }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T15:00:00+03:00", "LengthInMinutes": 60, "IsBusy": true }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T16:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T16:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T16:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T16:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T17:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T17:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T17:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T17:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T18:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T18:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T18:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T18:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T19:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T19:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T19:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T19:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T20:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T20:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T20:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16491, "BranchId": 1, "StartDateTime": "2021-11-05T20:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16555, "BranchId": 1, "StartDateTime": "2021-11-06T10:00:00+03:00", "LengthInMinutes": 540, "IsBusy": true }, { "DoctorId": 16555, "BranchId": 1, "StartDateTime": "2021-11-06T19:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16555, "BranchId": 1, "StartDateTime": "2021-11-06T19:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16555, "BranchId": 1, "StartDateTime": "2021-11-06T19:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16555, "BranchId": 1, "StartDateTime": "2021-11-06T19:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16555, "BranchId": 1, "StartDateTime": "2021-11-06T20:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16555, "BranchId": 1, "StartDateTime": "2021-11-06T20:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16555, "BranchId": 1, "StartDateTime": "2021-11-06T20:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16555, "BranchId": 1, "StartDateTime": "2021-11-06T20:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T09:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T09:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T09:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T09:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T10:00:00+03:00", "LengthInMinutes": 60, "IsBusy": true }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T11:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T11:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T11:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T11:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T12:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T12:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T12:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T12:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T13:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T13:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T13:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T13:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T14:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T14:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T14:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T14:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T15:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T15:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T15:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T15:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T16:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T16:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T16:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T16:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T17:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T17:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T17:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T17:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T18:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T18:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T18:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T18:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T19:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T19:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T19:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T19:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T20:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-04T20:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T09:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T09:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T09:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T09:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T10:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T10:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T10:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T10:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T11:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T11:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T11:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T11:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T12:00:00+03:00", "LengthInMinutes": 150, "IsBusy": true }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T14:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T14:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T15:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T15:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T15:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T15:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T16:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T16:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T16:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T16:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T17:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T17:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T17:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T17:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T18:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T18:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T18:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T18:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T19:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T19:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T19:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T19:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T20:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 16784, "BranchId": 1, "StartDateTime": "2021-11-05T20:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T09:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T09:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T09:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T09:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T10:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T10:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T10:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T10:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T11:00:00+03:00", "LengthInMinutes": 15, "IsBusy": true }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T11:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T11:30:00+03:00", "LengthInMinutes": 60, "IsBusy": true }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T12:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T12:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T13:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T13:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T13:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T13:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T14:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T14:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T14:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T14:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T15:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T15:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T15:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T15:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T16:00:00+03:00", "LengthInMinutes": 60, "IsBusy": true }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T17:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T17:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T17:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T17:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T18:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T18:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T18:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T18:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T19:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T19:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T19:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T19:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T20:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T20:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T20:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-04T20:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T10:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T10:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T10:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T10:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T11:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T11:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T11:30:00+03:00", "LengthInMinutes": 120, "IsBusy": true }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T13:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T13:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T14:00:00+03:00", "LengthInMinutes": 30, "IsBusy": true }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T14:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T14:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T15:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T15:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T15:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T15:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T16:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T16:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T16:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T16:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T17:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T17:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T17:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T17:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T18:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T18:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T18:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T18:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T19:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T19:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T19:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T19:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T20:00:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T20:15:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T20:30:00+03:00", "LengthInMinutes": 15, "IsBusy": false }, { "DoctorId": 17347, "BranchId": 1, "StartDateTime": "2021-11-06T20:45:00+03:00", "LengthInMinutes": 15, "IsBusy": false }] }
+
+const incomingJson = {
+  "Doctors": [
+      {
+          "Id": 4,
+          "Name": "Логунков Евгений Игоревич"
+      },
+      {
+          "Id": 5,
+          "Name": "Шаповалова Анна Сергеевна"
+      },
+      {
+          "Id": 6,
+          "Name": "Томсон Наталия Владимировна"
+      },
+      {
+          "Id": 8,
+          "Name": "Шабанов Эльдар Шабанович"
+      },
+      {
+          "Id": 16,
+          "Name": "Канунникова Ольга Николаевна"
+      },
+      {
+          "Id": 16784,
+          "Name": "Краснов Николай Владимирович"
+      },
+      {
+          "Id": 17347,
+          "Name": "Богатырев Даниил Михайлович"
+      },
+      {
+          "Id": 13536,
+          "Name": "Леонова Елена Леонидовна"
+      },
+      {
+          "Id": 13556,
+          "Name": "Дочия Татия Мерабовна"
+      },
+      {
+          "Id": 15819,
+          "Name": "Петрова Анастасия Сергеевна"
+      },
+      {
+          "Id": 16491,
+          "Name": "Галкина Мария Игоревна"
+      },
+      {
+          "Id": 16555,
+          "Name": "Пономарёва Валерия Александровна"
+      },
+      {
+          "Id": 13245,
+          "Name": "Логункова Ксения Вячеславовна"
+      },
+      {
+          "Id": 13809,
+          "Name": "Калитовская Марьяна Степановна"
+      }
+  ],
+  "Branches": [
+      {
+          "Id": 1,
+          "Name": "Томсон"
+      }
+  ],
+  "Intervals": [
+      {
+          "DoctorId": 4,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T17:30:00+03:00",
+          "LengthInMinutes": 90,
+          "IsBusy": true
+      },
+      {
+          "DoctorId": 4,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T19:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 4,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T19:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 4,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T19:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 4,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T19:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 4,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T20:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 4,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T20:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 4,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T20:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 4,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T20:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 5,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T17:30:00+03:00",
+          "LengthInMinutes": 60,
+          "IsBusy": true
+      },
+      {
+          "DoctorId": 5,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T18:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 5,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T18:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 5,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T19:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 5,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T19:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 5,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T19:30:00+03:00",
+          "LengthInMinutes": 90,
+          "IsBusy": true
+      },
+      {
+          "DoctorId": 13556,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T17:30:00+03:00",
+          "LengthInMinutes": 210,
+          "IsBusy": true
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T17:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T17:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T18:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T18:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T18:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T18:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T19:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T19:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T19:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T19:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T20:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T20:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T17:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T17:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T18:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T18:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T18:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T18:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T19:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T19:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T19:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T19:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T20:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T20:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T20:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-04T20:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 4,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T09:00:00+03:00",
+          "LengthInMinutes": 360,
+          "IsBusy": true
+      },
+      {
+          "DoctorId": 4,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T09:00:00+03:00",
+          "LengthInMinutes": 585,
+          "IsBusy": true
+      },
+      {
+          "DoctorId": 4,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T18:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 4,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T19:00:00+03:00",
+          "LengthInMinutes": 120,
+          "IsBusy": true
+      },
+      {
+          "DoctorId": 5,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T09:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 5,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T09:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 5,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T09:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 5,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T09:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 5,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T10:00:00+03:00",
+          "LengthInMinutes": 300,
+          "IsBusy": true
+      },
+      {
+          "DoctorId": 6,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T15:00:00+03:00",
+          "LengthInMinutes": 240,
+          "IsBusy": true
+      },
+      {
+          "DoctorId": 8,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T15:00:00+03:00",
+          "LengthInMinutes": 360,
+          "IsBusy": true
+      },
+      {
+          "DoctorId": 16,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T09:00:00+03:00",
+          "LengthInMinutes": 720,
+          "IsBusy": true
+      },
+      {
+          "DoctorId": 13245,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T09:00:00+03:00",
+          "LengthInMinutes": 240,
+          "IsBusy": true
+      },
+      {
+          "DoctorId": 13245,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T13:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13245,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T13:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13245,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T13:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13245,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T13:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13245,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T14:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13245,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T14:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13245,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T14:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13245,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T14:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": true
+      },
+      {
+          "DoctorId": 13245,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T09:00:00+03:00",
+          "LengthInMinutes": 360,
+          "IsBusy": true
+      },
+      {
+          "DoctorId": 13536,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T15:00:00+03:00",
+          "LengthInMinutes": 90,
+          "IsBusy": true
+      },
+      {
+          "DoctorId": 13536,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T16:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13536,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T16:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13536,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T17:00:00+03:00",
+          "LengthInMinutes": 150,
+          "IsBusy": true
+      },
+      {
+          "DoctorId": 13536,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T19:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13536,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T19:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13536,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T20:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13536,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T20:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13536,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T20:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13536,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T20:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13556,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T09:00:00+03:00",
+          "LengthInMinutes": 240,
+          "IsBusy": true
+      },
+      {
+          "DoctorId": 13556,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T13:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13556,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T13:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13556,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T13:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13556,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T13:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13556,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T14:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13556,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T14:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13556,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T14:30:00+03:00",
+          "LengthInMinutes": 30,
+          "IsBusy": true
+      },
+      {
+          "DoctorId": 13556,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T09:00:00+03:00",
+          "LengthInMinutes": 360,
+          "IsBusy": true
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T09:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T09:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T09:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T09:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T10:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T10:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T10:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T10:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T11:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T11:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T11:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T11:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T12:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T12:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T12:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T12:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T13:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T13:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T13:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T13:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T14:00:00+03:00",
+          "LengthInMinutes": 60,
+          "IsBusy": true
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T15:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T15:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T15:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T15:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T16:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T16:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T16:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T16:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T17:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T17:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T17:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T17:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T18:00:00+03:00",
+          "LengthInMinutes": 60,
+          "IsBusy": true
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T19:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T19:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T19:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T19:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T20:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T20:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T20:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 13809,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T20:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 15819,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T11:00:00+03:00",
+          "LengthInMinutes": 480,
+          "IsBusy": true
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T15:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T15:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T15:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T15:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T16:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T16:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T16:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T16:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T17:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T17:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T17:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T17:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T18:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T18:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T18:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T18:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T19:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T19:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T19:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T19:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T20:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T20:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T20:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T20:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T15:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T15:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T15:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T15:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T16:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T16:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T16:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T16:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T17:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T17:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T17:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T17:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T18:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T18:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T18:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T18:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T19:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T19:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T19:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T19:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T20:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T20:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T20:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16491,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T20:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16555,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T10:00:00+03:00",
+          "LengthInMinutes": 540,
+          "IsBusy": true
+      },
+      {
+          "DoctorId": 16555,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T19:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16555,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T19:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16555,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T19:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16555,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T19:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16555,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T20:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16555,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T20:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16555,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T20:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16555,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T20:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T09:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T09:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T09:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T09:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T10:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T10:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T10:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T10:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T11:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T11:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T11:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T11:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T12:00:00+03:00",
+          "LengthInMinutes": 150,
+          "IsBusy": true
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T14:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T14:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T15:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T15:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T15:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T15:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T16:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T16:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T16:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T16:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T17:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T17:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T17:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T17:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T18:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T18:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T18:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T18:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T19:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T19:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T19:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T19:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T20:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-05T20:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T09:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T09:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T09:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T09:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T10:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T10:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T10:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T10:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T11:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T11:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T11:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T11:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T12:00:00+03:00",
+          "LengthInMinutes": 60,
+          "IsBusy": true
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T13:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T13:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T13:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T13:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T14:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T14:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T14:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T14:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T15:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T15:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T15:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T15:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T16:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T16:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T16:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T16:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T17:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T17:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T17:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T17:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T18:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T18:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T18:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T18:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T19:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T19:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T19:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T19:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T20:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 16784,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-07T20:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T10:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T10:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T10:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T10:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T11:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T11:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T11:30:00+03:00",
+          "LengthInMinutes": 120,
+          "IsBusy": true
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T13:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T13:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T14:00:00+03:00",
+          "LengthInMinutes": 150,
+          "IsBusy": true
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T16:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T16:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": true
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T17:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T17:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T17:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T17:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T18:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T18:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T18:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T18:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T19:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T19:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T19:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T19:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T20:00:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T20:15:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T20:30:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      },
+      {
+          "DoctorId": 17347,
+          "BranchId": 1,
+          "StartDateTime": "2021-11-06T20:45:00+03:00",
+          "LengthInMinutes": 15,
+          "IsBusy": false
+      }
+  ]
+}
 
 const Styles = styled.div`
   padding: 1rem;

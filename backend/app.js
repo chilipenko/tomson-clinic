@@ -10,7 +10,6 @@ const app = express();
 
 // const adminRouter = require('./routes/admin.router')
 const identRouter = require('./routes/ident.router');
-const websiteRouter = require('./routes/website.router');
 
 dotenv.config();
 
@@ -48,7 +47,6 @@ app.use(express.static(path.join(__dirname, '..', 'frontend', 'build')));
 
 // app.use('/api/admin', adminRouter);
 app.use('/api/ident', identRouter);
-app.use('/api/website', websiteRouter);
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'frontend', 'build', 'index.html'));
