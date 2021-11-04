@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  /* width: 100%; */
+  justify-content: center;
+  margin-top: 19vh;
+}
+
+.adminForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  height: 200px;
+  border: 1px solid rgb(7, 179, 7);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 10px 5px 5px rgb(7, 179, 7);
+}
+
+.adminForm input {
+  border: 1px solid rgb(7, 179, 7);
+  margin-bottom: 30px;
+}
+
+.adminForm button {
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 900;
+  background-color: rgb(7, 179, 7);
+  max-width: 150px;
+}

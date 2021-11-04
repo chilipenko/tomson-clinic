@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Provider } from 'react-redux';
+import { store } from "../../redux/store";
 import Navigation from "../Navigation/Navigation";
 import Slider from "../Slider/Slider";
 import QuestionBlock from "../QuestionBlock/QuestionBlock";
@@ -10,10 +12,12 @@ import ReactAnimations from "../Animation/Animation";
 import LeftSideBar from "../Animation/LeftSideBar";
 import YourChoiceBlock from "../YourChoice/YourChoice"
 import OnlineTable from "../OnlineTable/OnlineTable";
+import AdminForm from "../AdminForm/AdminForm";
 
 
 function App() {
   return (
+    <Provider store={store}>
     <Router>
       {/* <Navigation /> */}
       <LeftSideBar />
@@ -28,6 +32,9 @@ function App() {
       <Route exact path='/denistry'>
         <Denistry />
       </Route>
+      <Route exact path='/admin'>
+        <AdminForm />
+      </Route>
       <Route exact path='/onlinetable'>
         <OnlineTable />
       </Route>
@@ -39,6 +46,7 @@ function App() {
       <Route exact path='/denistry/prosthetics'/>
       <Footer />
     </Router>
+    </Provider>
   );
 }
 
