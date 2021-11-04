@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import styles from './ButtonDate.module.css';
 
 function ButtonDate({id, date}) {
 
@@ -10,7 +11,7 @@ function ButtonDate({id, date}) {
   }
 
   return (
-    <button onClick={btnHandler}>{date}</button>
+    <button className={styles.btn} onClick={btnHandler}>{date}</button>
   )
 }
 

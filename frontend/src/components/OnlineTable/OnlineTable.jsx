@@ -12,35 +12,21 @@ function OnlineTable({ active, setActive, title}) {
   const tableId = useSelector(state => state.tableReducer.tableId)
   
   const Styles = styled.div`
-    padding: 1rem;
-  
-    .user {
-      background-color: blue;
-      color: white;
-    }
-  
+    padding: 1.5rem;
+
     table {
-      border-spacing: 0;
-      border: 1px solid black;
+      border-collapse: collapse;
+      border-radius: 1.5em;
+      overflow: hidden;
   
-      tr {
-        :last-child {
-          td {
-            border-bottom: 0;
-          }
-        }
-      }
   
       th,
       td {
-        margin: 0;
-        padding: 0.5rem;
-        border-bottom: 1px solid black;
-        border-right: 1px solid black;
+        padding: 1em;
+        background: #ddd;
+        border-bottom: 2px solid white;
+        border-left: 2px solid white; 
   
-        :last-child {
-          border-right: 0;
-        }
       }
     }
   `
@@ -270,8 +256,8 @@ const freeDoctorsArr = doctorsArr.filter(el => haveFreeSlotsObj[el.accessor]);
               alert(cellInfo.value + " " + cellInfo.column.Header + " " + cellInfo.row.allCells['0'].value/*+ " " + cellInfo.column.parent.Header*/)
             },
             style: {
-              backgroundColor: `${(cellInfo.value === '+') ? 'red' : (cellInfo.column.Header !== 'Время') ? 'green' : 'white'}`,
-              color: `${(cellInfo.value === '+') ? 'red' : (cellInfo.column.Header !== 'Время') ? 'green' : 'black'}`,
+              backgroundColor: `${(cellInfo.value === '+') ? 'rgb(240, 19, 49)' : (cellInfo.column.Header !== 'Время') ? 'rgb(7, 179, 7)' : '#ddd'}`,
+              color: `${(cellInfo.value === '+') ? 'rgb(240, 19, 49)' : (cellInfo.column.Header !== 'Время') ? 'rgb(7, 179, 7)' : 'black'}`,
             },
           })}
         />
