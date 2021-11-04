@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './ModalTable.module.css';
 import styled from 'styled-components';
 import { useTable } from 'react-table';
@@ -839,8 +839,28 @@ const doctorsArr1 = incomingJson.Doctors.map((el, index) => ({ Header: el.Name, 
 const dataArr = [];
 const doctorsSlotsRowArr = [];
 
+
+
 function ModalTable({active, setActive, title}) {
 
+  // const [incomingJson, setIncomingJson] = useState([]);
+  console.log("Test");
+  useEffect(() => {
+    // getIncomingJson();
+    fetch('https://tomson-clinic.herokuapp.com//api/ident/gettimetable', {
+      credentials: 'include'
+    })
+      .then(res => res.json())
+      .then(console.log);
+    // console.log("incomingJson", incomingJson);
+  }, []);
+
+  const getIncomingJson = () => {
+    fetch('https://tomson-clinic.herokuapp.com/api/website/timetable')
+      .then(res => res.json())
+      .then(console.log)
+      // .then(data => setIncomingJson(data))
+  };
 
   // creating table columns
   const columns = React.useMemo(() =>

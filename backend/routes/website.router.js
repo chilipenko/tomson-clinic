@@ -1,8 +1,10 @@
 const express = require('express');
 
+const app = express();
 const router = express.Router();
 
 router.get('/timetable', async (req, res) => {
+  console.log("app.locals.incomingJson", app.locals.incomingJson);
   res.json(app.locals.incomingJson);
 })
 
