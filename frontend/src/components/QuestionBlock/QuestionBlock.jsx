@@ -1,5 +1,7 @@
-import React, { useState }  from "react";
+import React, { useState } from "react";
 import dentist from "./img/IMG_9572.jpg";
+import signature from "./img/signature.jpg";
+
 import styles from "./QuestionBlock.module.css";
 import Fade from "react-reveal/Fade";
 import ModalQuestion from "../ModalQuestion/ModalQuestion";
@@ -21,9 +23,10 @@ function QuestionBlock() {
             <span>Я РАДА ПРИВЕТСTВОВАТЬ ВАС НА САЙТЕ НАШЕЙ КЛИНИКИ.</span>
             <p>
               Мелькают дни, складываясь в недели и месяцы, месяцы не менее
-              стремительно превращаются в годы. И вот нам уже 25 лет! Для человека
-              25 лет – это начало жизненного пути, для нашего коллектива – это
-              этап, когда можно и следует оглянуться, подвести некоторые итоги.
+              стремительно превращаются в годы. И вот нам уже 25 лет! Для
+              человека 25 лет – это начало жизненного пути, для нашего
+              коллектива – это этап, когда можно и следует оглянуться, подвести
+              некоторые итоги.
             </p>
             <p>
               Доктора совершают чудеса преображения наших женщин и мужчин,
@@ -33,17 +36,35 @@ function QuestionBlock() {
               уверенностью смотрит в будущее.
             </p>
             <p>Будем рады видеть Вас в нашей Клинике!</p>
-            <span>Будьте здоровы и красивы!</span>
-            <p>Генеральный директор Клиники «ТОМСОН»</p>
-            <button onClick={() => setModalActive(true)}>ЗАДАТЬ ВОПРОС</button>
+            <div className={styles["block-question"]}>
+              <div>
+                
+                <h4>Будьте здоровы и красивы!</h4>
+                <p>Генеральный директор Клиники «ТОМСОН»</p>
+                <p>Томсон Лариса Владимировна</p>{" "}
+                <button onClick={() => setModalActive(true)}>
+                ЗАДАТЬ ВОПРОС
+              </button>
+              </div>
+               
+              <div>
+                <img
+                  style={{ width: "300px", height: "195px" }}
+                  src={signature}
+                  alt="signature"
+                />
+
+              </div>
+
+             
+            </div>
           </div>
-         
         </Fade>
       </div>
- {
-  modalActive && <ModalQuestion active={modalActive} setActive={setModalActive} />
- }
- </>
+      {modalActive && (
+        <ModalQuestion active={modalActive} setActive={setModalActive} />
+      )}
+    </>
   );
 }
 

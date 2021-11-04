@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import BurgerButton  from '../BurgerButton';
 import { LeftSideBarContext } from '../index';
-import logo from '../../../Navigation/img/logo.png';
+import logo from './img/logo.png';
 import styles from '../../../Navigation/Navigation.module.css';
 import './style.scss';
 
