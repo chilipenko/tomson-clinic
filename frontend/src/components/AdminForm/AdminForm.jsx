@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import styles from './AdminForm.module.css';
+import { initAdmin } from '../../redux/actionCreators/adminAC';
 
 
 function AdminForm() {
@@ -27,7 +28,7 @@ function AdminForm() {
     const result = await response.json();
 
     if(result.auth) {
-      dispatch()
+      dispatch(initAdmin())
       history.push('admin/table')
     } else {
       history.push('/')

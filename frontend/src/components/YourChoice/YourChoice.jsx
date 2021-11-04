@@ -27,21 +27,24 @@ function YourChoiceBlock() {
       <Carousel>
         <Carousel.Item>
           <img
-            className="d-block w-100" 
+            style={{'height': '550px', 'width': '890px'}}
+            className="d-block" 
             src={smile}
             alt="test1"
           />
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block w-100" 
+            style={{'height': '550px', 'width': '890px'}}
+            className="d-block" 
             src={laboratory}
             alt="test1"
           />
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block w-100" 
+            style={{'height': '550px', 'width': '890px'}}
+            className="d-block" 
             src={IMG_9374}
             alt="test1"
           />
