@@ -15,6 +15,7 @@ import YourChoiceBlock from "../YourChoice/YourChoice"
 import OnlineTable from "../OnlineTable/OnlineTable";
 import AdminForm from "../AdminForm/AdminForm";
 import AdminTable from "../AdminTable/AdminTable";
+import TablePage from "../TablePage/TablePage";
 
 
 function App() {
@@ -48,7 +49,7 @@ function App() {
           :<Redirect to='/' />
       } */}
       <Route exact path='/onlinetable'>
-        <OnlineTable />
+        <TablePage />
       </Route>
       <Route exact path='/denistry/treatment'/>
       <Route exact path='/denistry/hygiene'/>
