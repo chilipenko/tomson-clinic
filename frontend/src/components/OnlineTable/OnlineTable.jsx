@@ -1,12 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { useTable } from 'react-table';
 import { useDispatch, useSelector } from 'react-redux';
 import moment from 'moment';
 import ButtonDate from '../ButtonDate/ButtonDate';
+import ModalOnlineTable from '../ModalOnlineTable/ModalOnlineTable'
 
 
 function OnlineTable({ active, setActive, title}) {
+
+  const [modalActive, setModalActive] = useState(false);
+  const [time, setTime] = useState('');
+  const [doctor, setDoctor] = useState('');
 
   const doctorTable = useSelector(state => state.fetchReducer.doctorTable)
   const tableId = useSelector(state => state.tableReducer.tableId)
@@ -265,9 +270,10 @@ const freeDoctorsArr = doctorsArr.filter(el => haveFreeSlotsObj[el.accessor]);
             },
           })}
           getCellProps={cellInfo => ({
-            onClick: () => {
+            onClick: () => {cellInfo.value === "-" && setModalActive(true); setTime(cellInfo.row.allCells['0'].value); setDoctor(cellInfo.column.Header)
               // alert(Object.keys(cellInfo.column))
-              alert(cellInfo.value + " " + cellInfo.column.Header + " " + cellInfo.row.allCells['0'].value/*+ " " + cellInfo.column.parent.Header*/)
+              // alert(cellInfo.value + " " + cellInfo.column.Header + " " + cellInfo.row.allCells['0'].value/*+ " " + cellInfo.column.parent.Header*/)
+            
             },
             style: {
               backgroundColor: `${(cellInfo.value === '+') ? 'red' : (cellInfo.column.Header !== 'Время') ? 'green' : 'white'}`,
@@ -276,7 +282,9 @@ const freeDoctorsArr = doctorsArr.filter(el => haveFreeSlotsObj[el.accessor]);
           })}
         />
       </Styles>
-
+      {modalActive && (
+        <ModalOnlineTable active={modalActive} setActive={setModalActive} time={time} doctor={doctor}/>
+      )}
     </>
   );
 }

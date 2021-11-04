@@ -1,19 +1,19 @@
 import React, { useRef } from "react";
-import styles from "./ModalQuestion.module.css";
+import styles from "./ModalOnlineTable.module.css";
 
-function ModalQuestion({ active, setActive }) {
+function ModalOnlineTable({ active, setActive, time, doctor }) {
   const nameUser = useRef(null);
-  const textUser = useRef(null);
+  // const textUser = useRef(null);
   const tel = useRef(null);
 
   const changeHandler = async (event) => {
     event.preventDefault();
     const user = nameUser.current.value;
-    const inputText = textUser.current.value;
+    // const inputText = textUser.current.value;
     const telNumber = tel.current.value;
     const key = "2070966167:AAHu1FaEA5tWa3kuKXwBNGUgasuD_mEhMIQ";
     const chat_id = "-1001223671091";
-    const message = `Задан вопрос с сайта:%0A - <b>Имя:</b> <i>${user}</i>%0A - <b>Телефон:</b> <i>${telNumber}</i>%0A - <b>Вопрос:</b> <i>${inputText}</i>`;
+    const message = `Онлайн запись с сайта:%0A - <b>Имя:</b> <i>${user}</i>%0A - <b>Телефон:</b> <i>${telNumber}</i>%0A - <b>Запись к врачу:</b><i>${doctor}</i>%0A - <b>Время записи:</b><i>${time}</i>%0A `;
     const url = `https://api.telegram.org/bot${key}/sendMessage?chat_id=${chat_id}&text=${message}&parse_mode=html`;
     const reg =
       /(\+7|8)[- _]*\(?[- _]*(\d{3}[- _]*\)?([- _]*\d){7}|\d\d[- _]*\d\d[- _]*\)?([- _]*\d){6})/g;
@@ -22,8 +22,8 @@ function ModalQuestion({ active, setActive }) {
       alert("Как к Вам обращаться?");
     } else if (!valid) {
       alert("Номер телефона введен неправильно!");
-    } else if (inputText == "") {
-      alert("Задайте Ваш вопрос");
+      // } else if (inputText == "") {
+      //   alert("Задайте Ваш вопрос");
     } else {
       const response = await fetch(url, {
         method: "GET",
@@ -49,25 +49,21 @@ function ModalQuestion({ active, setActive }) {
         }
         onClick={(e) => e.stopPropagation()}
       >
+        <div>{`Выбранный доктор: ${doctor}`} </div>
+        <div>{`Желаемое время записи: ${time}`} </div>
         <div className="mb-3">
           <form onSubmit={changeHandler}>
             <input
               ref={nameUser}
               className="form-control"
               type="text"
-              placeholder="Имя"
+              placeholder="Введите Ваше имя"
             />
             <input
               ref={tel}
               className="form-control"
               type="tel"
               placeholder="Ваш номер телефона"
-            />
-            <textarea
-              ref={textUser}
-              className="form-control"
-              type="text"
-              placeholder="Напишите Ваш вопрос"
             />
             <button type="submit" className={`btn ${styles["modal_button"]}`}>
               Отправить
@@ -78,4 +74,4 @@ function ModalQuestion({ active, setActive }) {
     </div>
   );
 }
-export default ModalQuestion;
+export default ModalOnlineTable;
