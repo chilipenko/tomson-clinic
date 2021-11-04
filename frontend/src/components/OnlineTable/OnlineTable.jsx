@@ -270,8 +270,8 @@ const freeDoctorsArr = doctorsArr.filter(el => haveFreeSlotsObj[el.accessor]);
               alert(cellInfo.value + " " + cellInfo.column.Header + " " + cellInfo.row.allCells['0'].value/*+ " " + cellInfo.column.parent.Header*/)
             },
             style: {
-              backgroundColor: `${(cellInfo.value === '+') ? 'red' : (cellInfo.column.Header !== 'Время') ? 'green' : 'white'}`,
-              color: `${(cellInfo.value === '+') ? 'red' : (cellInfo.column.Header !== 'Время') ? 'green' : 'black'}`,
+              backgroundColor: `${(cellInfo.value === '+') ? 'rgb(240, 19, 49)' : (cellInfo.column.Header !== 'Время') ? 'rgb(7, 179, 7)' : 'white'}`,
+              color: `${(cellInfo.value === '+') ? 'rgb(240, 19, 49)' : (cellInfo.column.Header !== 'Время') ? 'rgb(7, 179, 7)' : 'black'}`,
             },
           })}
         />
