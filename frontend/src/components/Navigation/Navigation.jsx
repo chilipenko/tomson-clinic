@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from './img/logo.png';
+// import logo from './img/logo.png';
 import styles from './Navigation.module.css';
 
 function Navigation() {
   return (
     <nav>
       <ul className={styles.navigation}>
-        <Link to="/" className={styles.logo}><img src={logo} alt="logo" /></Link>
+        {/* <Link to="/" className={styles.logo}><img src={logo} alt="logo" /></Link> */}
         <ul className={styles['menu-list']}>
           <Link to="/"><li>О клинике</li></Link>
           <Link to="/"><li>Стоматология</li></Link>
