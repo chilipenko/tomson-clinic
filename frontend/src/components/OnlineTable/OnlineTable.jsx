@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { useTable } from 'react-table';
+import { useDispatch } from 'react-redux';
 import moment from 'moment';
 
 
@@ -124,12 +125,14 @@ const doctorsSlotsRowArr = [];
 
 function OnlineTable({ active, setActive, title }) {
 
+  const dispatch = useDispatch()
+
   console.log("Test");
   useEffect(() => {
     // getIncomingJson();
     fetch('https://tomson-clinic.herokuapp.com/api/ident/gettimetable')
       .then(res => res.json())
-      .then(console.log);
+      .then(data => dispatch({type:'FETCH_STATE', payload: data}));
     // console.log("incomingJson", incomingJson);
   }, []);
 
