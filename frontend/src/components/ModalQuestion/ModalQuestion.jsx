@@ -51,7 +51,7 @@ function ModalQuestion({ active, setActive }) {
       >
         <div className="mb-3">
           <form onSubmit={changeHandler}>
-            <input
+            <input 
               ref={nameUser}
               className="form-control"
               type="text"
