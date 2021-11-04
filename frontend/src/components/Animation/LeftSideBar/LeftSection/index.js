@@ -18,9 +18,9 @@ const LeftSection = () => {
       </div>
       <ul className={styles['menu-list']}>
         <Link to="/"><li>О клинике</li></Link>
-        <Link to="/"><li>Стоматалогия</li></Link>
-        <Link to="/"><li>Косметалогия</li></Link>
-        <Link to="/"><li>Детская стоматалогия</li></Link>
+        <Link to="/denistry"><li>Стоматология</li></Link>
+        <Link to="/"><li>Косметология</li></Link>
+        <Link to="/"><li>Детская стоматология</li></Link>
         <Link to="/"><li>Отзывы</li></Link>
         <Link to="/"><li>Контакты</li></Link>
         <Link to="/denistry"><li>Цены</li></Link>
