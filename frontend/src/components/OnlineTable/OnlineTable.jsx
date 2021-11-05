@@ -270,7 +270,7 @@ const freeDoctorsArr = doctorsArr.filter(el => haveFreeSlotsObj[el.accessor]);
         />
       </Styles>
       {modalActive && (
-        <ModalOnlineTable active={modalActive} setActive={setModalActive} time={time} doctor={doctor}/>
+        <ModalOnlineTable active={modalActive} setActive={setModalActive} time={time} doctor={doctor} date={tableId}/>
       )}
     </>
   );
