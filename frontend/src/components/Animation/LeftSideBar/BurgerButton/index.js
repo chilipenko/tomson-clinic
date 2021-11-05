@@ -16,25 +16,28 @@
 // };
 
 // export default BurgerButton;
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { LeftSideBarContext } from '..';
 import './style.scss';
 
 const BurgerMenu = ({ onClick }) => {
-  const [status, setStatus] = useState('close');
+  const { isShowSidebar, setIsShowSidebar } = useContext(LeftSideBarContext);
+  // const [status, setStatus] = useState('close');
   return (
     <nav>
       <div
         className="BurgerMenu__container"
         role="button"
         onClick={() =>{
-          onClick() 
-          setStatus(status === 'open' ? 'close' : 'open')
+          console.log('click')
+          onClick()
+          setIsShowSidebar(!isShowSidebar)
         }
         } 
       >
-        <i className={status}></i>
-        <i className={status}></i>
-        <i className={status}></i>
+        <i className={isShowSidebar ? 'open' : 'close'}></i>
+        <i className={isShowSidebar ? 'open' : 'close'}></i>
+        <i className={isShowSidebar ? 'open' : 'close'}></i>
       </div>
     </nav>
   );
