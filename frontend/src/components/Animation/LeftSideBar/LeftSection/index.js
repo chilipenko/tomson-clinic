@@ -10,11 +10,11 @@ import {AiOutlineCloseCircle} from 'react-icons/ai'
 
 const LeftSection = () => {
   const { isShowSidebar, setIsShowSidebar } = useContext(LeftSideBarContext);
-  const [status, setStatus] = useState('close');
+  // const [status, setStatus] = useState('close');
   return (
     <div className={`LeftSideBar__LeftSection LeftSideBar__LeftSection--${isShowSidebar ? 'show' : 'hide'}`}>
       <div className="LeftSideBar__LeftSection__topWrapper">
-        <AiOutlineCloseCircle size='40px' color='red' onClick={() => {setIsShowSidebar(false); setStatus(status === 'close')}}/>
+        <AiOutlineCloseCircle size='40px' color='red' onClick={() => {setIsShowSidebar((state) => !state)}}/>
       </div>
       <ul className={styles['menu-list']}>
         <Link to="/"><li>О клинике</li></Link>
