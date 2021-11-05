@@ -50,18 +50,18 @@ function ModalOnlineTable({ active, setActive, time, doctor }) {
         onClick={(e) => e.stopPropagation()}
       >
         <div>{`Выбранный доктор: ${doctor}`} </div>
-        <div>{`Желаемое время записи: ${time}`} </div>
+        <div className="mb-3">{`Желаемое время записи: ${time}`} </div>
         <div className="mb-3">
           <form onSubmit={changeHandler}>
             <input
               ref={nameUser}
-              className="form-control"
+              className="form-control mb-2"
               type="text"
               placeholder="Введите Ваше имя"
             />
             <input
               ref={tel}
-              className="form-control"
+              className="form-control mb-2"
               type="tel"
               placeholder="Ваш номер телефона"
             />
