@@ -31,10 +31,16 @@
   transform: scale(1);
 }
 
+.time {
+  color: rgb(7, 179, 7);
+  font-weight: 900;
+}
+
 .modal_button {
   color: white;
   background-color: rgb(7, 179, 7);
   border: 1px solid rgb(7, 179, 7);
+  font-weight: 900;
 }
 .modal_button:hover {
   background-color: rgb(7, 179, 7);
