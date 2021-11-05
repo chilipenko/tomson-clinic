@@ -50,22 +50,23 @@ function ModalQuestion({ active, setActive }) {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="mb-3">
-          <form onSubmit={changeHandler}>
+          <form className={styles['form-content']} onSubmit={changeHandler}>
             <input
               ref={nameUser}
-              className="form-control"
+              className="form-control mb-3"
               type="text"
               placeholder="Имя"
             />
             <input
               ref={tel}
-              className="form-control"
+              className="form-control mb-3"
               type="tel"
               placeholder="Ваш номер телефона"
             />
             <textarea
               ref={textUser}
-              className="form-control"
+              className="form-control mb-3"
+              style={{'width': '400px' ,'height': '100px'}}
               type="text"
               placeholder="Напишите Ваш вопрос"
             />

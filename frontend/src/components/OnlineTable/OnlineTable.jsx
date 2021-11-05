@@ -262,8 +262,9 @@ const freeDoctorsArr = doctorsArr.filter(el => haveFreeSlotsObj[el.accessor]);
             
             },
             style: {
-              backgroundColor: `${(cellInfo.value === '+') ? 'rgb(240, 19, 49)' : (cellInfo.column.Header !== 'Время') ? 'rgb(7, 179, 7)' : '#ddd'}`,
-              color: `${(cellInfo.value === '+') ? 'rgb(240, 19, 49)' : (cellInfo.column.Header !== 'Время') ? 'rgb(7, 179, 7)' : 'black'}`,
+              backgroundColor: `${(cellInfo.value === '+') ? 'rgb(240, 19, 49)' : (cellInfo.column.Header !== 'Время') ? 'rgb(181 204 57)' : '#ddd'}`,
+              cursor: `${(cellInfo.value === '+') ? 'rgb(240, 19, 49)' : (cellInfo.column.Header !== 'Время') ? 'pointer' : '#ddd'}`,
+              color: `${(cellInfo.value === '+') ? 'rgb(240, 19, 49)' : (cellInfo.column.Header !== 'Время') ? 'rgb(181 204 57)' : 'black'}`,
             },
           })}
         />
