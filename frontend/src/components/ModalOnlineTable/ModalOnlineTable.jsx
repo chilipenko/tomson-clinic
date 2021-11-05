@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import styles from "./ModalOnlineTable.module.css";
 
-function ModalOnlineTable({ active, setActive, time, doctor }) {
+function ModalOnlineTable({ active, setActive, time, doctor, date }) {
   const nameUser = useRef(null);
   // const textUser = useRef(null);
   const tel = useRef(null);
@@ -13,7 +13,7 @@ function ModalOnlineTable({ active, setActive, time, doctor }) {
     const telNumber = tel.current.value;
     const key = "2070966167:AAHu1FaEA5tWa3kuKXwBNGUgasuD_mEhMIQ";
     const chat_id = "-1001223671091";
-    const message = `Онлайн запись с сайта:%0A - <b>Имя:</b> <i>${user}</i>%0A - <b>Телефон:</b> <i>${telNumber}</i>%0A - <b>Запись к врачу:</b><i>${doctor}</i>%0A - <b>Время записи:</b><i>${time}</i>%0A `;
+    const message = `Онлайн запись с сайта:%0A - <b>Имя:</b> <i>${user}</i>%0A - <b>Телефон:</b> <i>${telNumber}</i>%0A - <b>Запись к врачу:</b><i>${doctor}</i>%0A - <b>Время записи:</b><i>${time}</i>%0A - <b>Дата записи:</b><i>${date}</i>%0A`;
     const url = `https://api.telegram.org/bot${key}/sendMessage?chat_id=${chat_id}&text=${message}&parse_mode=html`;
     const reg =
       /(\+7|8)[- _]*\(?[- _]*(\d{3}[- _]*\)?([- _]*\d){7}|\d\d[- _]*\d\d[- _]*\)?([- _]*\d){6})/g;
