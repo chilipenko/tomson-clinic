@@ -1,0 +1,41 @@
+.banner-form {
+  display: flex;
+  flex-direction: column;
+  /* border: 3px solid tomato; */
+  max-width: 600px;
+  position: relative;
+  left: 8vh;
+  top: -60vh;
+  background-color: rgba(255, 255, 255, 0.521);
+  padding: 40px;
+  border-radius: 10%;
+  align-items: center;
+}
+
+.banner-form h1 {
+  color: rgb(7, 179, 7);
+  font-size: 50px;
+}
+
+.banner-form p {
+  font-weight: 900;
+}
+
+.banner-form button {
+  border: 2px solid red;
+  color: red;
+  border-radius: 20px;
+  padding: 10px;
+  background: transparent;
+  max-width: 300px;
+  font-weight: 500;
+  font-size: 15px;
+  transition: all 0.5s ease;
+}
+
+.banner-form button:hover {
+  background-color: rgb(7, 179, 7);
+  color: white;
+  border: 2px solid rgb(7, 179, 7);
+  transition: all 0.5s ease;
+}

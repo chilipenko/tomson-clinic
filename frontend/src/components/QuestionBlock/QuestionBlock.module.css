@@ -1,0 +1,51 @@
+.welcome-block {
+  display: flex;
+  align-items: center;
+  margin-right: 60px;
+  margin-left: 60px;
+  margin-bottom: 60px;
+ 
+}
+
+.welcome-block img {
+  margin-right: 30px;
+}
+
+.welcome-block-question {
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome-block-question span {
+  font-weight: 900;
+  font-size: 25px;
+}
+
+.welcome-block-question p {
+  font-size: 18px;
+}
+
+.block-question  {
+  display: flex;
+  align-items: space-between;
+  font-size: 18px;
+}
+
+.welcome-block-question button {
+  border: 2px solid red;
+  color: red;
+  border-radius: 20px;
+  padding: 10px;
+  background: transparent;
+  max-width: 300px;
+  font-weight: 500;
+  font-size: 15px;
+  transition: all 0.5s ease;
+}
+
+.welcome-block-question button:hover {
+  background-color: rgb(7, 179, 7);
+  color: white;
+  border: 2px solid rgb(7, 179, 7);
+  transition: all 0.5s ease;
+}

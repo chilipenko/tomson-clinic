@@ -1,0 +1,58 @@
+.services-block {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 120px;
+}
+
+.block {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 20px;
+  width: 30%;
+  background-color: rgb(7, 179, 7);
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.block:hover {
+  background-color: rgb(38, 148, 38);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  /* margin-top: -20px; */
+  transition: all 0.5s ease;
+}
+
+.block:nth-child(even) {
+  background-color: rgb(38, 148, 38);
+}
+
+.block:nth-child(even):hover {
+  background-color: rgb(7, 179, 7);
+}
+
+.block span {
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.block p {
+  text-align: center;
+}
+
+.block button {
+  border: 2px solid white;
+  color: white;
+  border-radius: 20px;
+  padding: 12px;
+  background: red;
+  max-width: 300px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.5s ease;
+}
+
+.block button:hover {
+  background-color: white;
+  color: red;
+}

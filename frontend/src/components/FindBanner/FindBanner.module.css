@@ -1,0 +1,38 @@
+.find-banner {
+  padding: 45px 65px;
+  background-color: white;
+  font-size: 24px;
+  width: 560px;
+  position: relative;
+  top: -70vh;
+  left: 5vw;
+}
+
+.info__text {
+  margin-bottom: 40px;
+}
+
+.info__phone {
+  font-size: 48px;
+  font-weight: 700;
+  color: #707f9f;
+}
+
+.info__email {
+  display: flex;
+  align-items: center;
+}
+
+.info__email div {
+  color: #525556;
+  margin-left: 5px;
+}
+
+.info__addres {
+  display: flex;
+  align-items: center;
+}
+
+.info__addres div {
+  color: #525556;
+}

@@ -1,0 +1,72 @@
+/* .yourchoice-block {
+  display: flex;
+  align-items: center;
+  margin-right: 60px;
+  margin-left: 60px;
+  margin-bottom: 60px;
+  font-family: Muller,Arial,sans-serif;
+}
+
+.yourchoice-block img {
+  margin-right: 30px;
+  width: 60%!important;
+}
+
+.yourchoice-block span {
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.yourchoice-block p {
+  font-size: 13px;
+} */
+
+/* NEW */
+.container {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  /* margin-bottom: 100px; */
+  background-color: rgba(182, 204, 57, 0.210);;
+  max-height: 550px;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  /* margin-left: 50px; */
+  margin-top: 5%;
+  margin-left: 30px;
+}
+
+.text-content span {
+  font-weight: 900;
+  background-color: rgb(7, 179, 7);
+  color: white;
+  font-size: 18px;
+  margin-left: 7px;
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.text-content ul {
+  /* list-style-image: url('./img/done.svg'); */
+  list-style-image: url('./img/apple.svg');
+  list-style-type: none;
+  margin-left: 50px;
+}
+
+/* .text-content li::before {
+  content: '';
+} */
+
+.text-content ul li {
+  font-size: 25px;
+  color: rgb(48, 45, 45);
+}
+
+.slider-container {
+  max-width: 900px;
+  min-height: 400px;
+}

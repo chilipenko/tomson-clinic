@@ -1,0 +1,90 @@
+/* .navigation {
+  display: flex;
+  padding: 10px 10px;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 10px;
+}
+
+.menu-list {
+  display: flex;
+  list-style-type: none;
+  margin-right: 70px;
+}
+
+.menu-list a {
+  text-decoration: none;
+  color: rgb(7, 179, 7);
+  padding: 5px 10px;
+  transition: all 0.3s ease-out;
+}
+
+.menu-list a:hover {
+  color: white;
+  background-color: rgb(7, 179, 7);
+  border-radius: 17px;
+  transition: all 0.3s ease-out;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  list-style-type: none;
+}
+
+.contact-list a {
+  text-decoration: none;
+  color: rgb(66, 66, 66);
+}
+ */
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 10px;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  list-style-image: url('./img//apple.svg');
+  margin-right: 70px;
+}
+
+.menu-list a {
+  text-decoration: none;
+  color: rgb(32, 32, 32);
+  padding: 5px 5px;
+  font-weight: 700;
+  font-size: 20px;
+  min-width: 300px;
+  transition: all 0.3s ease-out;
+}
+
+.menu-list a:hover {
+  color: white;
+  background-color: rgb(7, 179, 7);
+  border-radius: 17px;
+  transition: all 0.3s ease-out;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  list-style-type: none;
+}
+
+.contact-list a {
+  text-decoration: none;
+  color: rgb(66, 66, 66);
+}

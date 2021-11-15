@@ -1,0 +1,26 @@
+{
+  "name": "tomson-clinic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./backend/app.js",
+    "heroku-prebuild": "cd backend && npm ci",
+    "heroku-postbuild": "cd frontend && npm ci && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chilipenko/tomson-clinic.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chilipenko/tomson-clinic/issues"
+  },
+  "homepage": "https://github.com/chilipenko/tomson-clinic#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

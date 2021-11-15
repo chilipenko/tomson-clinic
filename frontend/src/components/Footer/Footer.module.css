@@ -1,0 +1,9 @@
+.footer-content {
+  margin-top: auto;
+  /* height: 70px; */
+  background-color: rgb(7, 179, 7);
+  color: white;
+  /* padding: 30px; */
+  font-weight: 600;
+  text-align: center;
+}
