@@ -3,7 +3,6 @@ import { Carousel } from 'react-bootstrap';
 import smile from './img/smile.jpg';
 import laboratory from './img/laboratory.jpg';
 import IMG_9374 from './img/IMG_9374.jpg';
-import olegsmile from './img/olegsmile.jpg';
 
 import styles from './YourChoice.module.css';
 import Fade from 'react-reveal/Fade';
@@ -47,14 +46,6 @@ function YourChoiceBlock() {
             style={{'height': '550px', 'width': '890px'}}
             className="d-block" 
             src={IMG_9374}
-            alt="test1"
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            style={{'height': '550px', 'width': '890px'}}
-            className="d-block" 
-            src={olegsmile}
             alt="test1"
           />
         </Carousel.Item>
